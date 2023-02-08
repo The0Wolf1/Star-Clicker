@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
     <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Star Clicker</title>
         <link rel="stylesheet" href="index.css">
         <link rel="icon" type="image/png" sizes="32x32" href="images/space.png">
@@ -9,87 +9,85 @@
     <body>
         <script src="index.js"></script>
         <button id="restart-btn" onclick="restart()">Replace Star</button>
-        <center>
-            <img src="images/star.png" id="clickButton" onclick="increment()">
-            <div id="info">
-                <p id="starCounter">Stars Collect: <span id="showStars" class="number">0</span></p>
-                <p>Stars per second: <span id="showStarsPerSecond" class="number">0</span></p>
-                <p>Stars per click: <span id="showStarsPerClick" class="number">1</span></p>
-            </div>
-            <div class="itemContainer">
-                <div class="miners">
-                    <div class="containerImage">
-                        <img src="images/items/pickaxe.png" class="itemImage" style="width:100px;height:100px;">
-                        
-                        <div class="buyButtonContainer">
-                            
-                            <button onclick="buyMiners()" class="buyButton">Buy Miners</button>
-                        </div>
-                    </div>
+        <img src="images/star.png" id="clickButton" onclick="increment()">
+        <div id="info">
+            <p id="starCounter">Stars Collect: <span id="showStars" class="number">0</span></p>
+            <p>Stars per second: <span id="showStarsPerSecond" class="number">0</span></p>
+            <p>Stars per click: <span id="showStarsPerClick" class="number">1</span></p>
+        </div>
+        <div class="itemContainer">
+            <div class="miners">
+                <div class="containerImage">
+                    <img src="images/items/pickaxe.png" class="itemImage" style="width:100px;height:100px;">
                     
-                    <div class="containerText">
-                        <p>Miners: <span id="minersNum">0</span></p>
+                    <div class="buyButtonContainer">
                         
-                        <p>Miners cost: <span id="minersCost">50</span></p>
-                        
-                        <p>+1 Stars per second</p>
+                        <button onclick="buyMiners()" class="buyButton">Buy Miners</button>
                     </div>
                 </div>
-                <div class="drills">
-                     <div class="containerImage">
-                        <img src="images/items/drills.png" class="itemImage" style="width:100px;height:100px;">
-                        
-                        <div class="buyButtonContainer">
-                            
-                            <button onclick="buyDrills()" class="buyButton">Buy Drills</button>
-                        </div>
-                    </div>
+                
+                <div class="containerText">
+                    <p>Miners: <span id="minersNum">0</span></p>
                     
-                    <div class="containerText">
-                        <p>Drills: <span id="drillsNum">0</span></p>
-                        
-                        <p>Drills cost: <span id="drillsCost">250</span></p>
-                        
-                        <p>+4 Stars per second</p>
-                    </div>
-                </div>
-                <div class="lasers">
-                    <div class="containerImage">
-                        <img src="images/items/laser.png" class="itemImage" style="width:100px;height:100px;">
-                        
-                        <div class="buyButtonContainer">
-                            
-                            <button onclick="buyLasers()" class="buyButton">Buy Lasers</button>
-                        </div>
-                    </div>
+                    <p>Miners cost: <span id="minersCost">50</span></p>
                     
-                    <div class="containerText">
-                        <p>Lasers: <span id="lasersNum">0</span></p>
-                        
-                        <p>Laser cost: <span id="laserCost">1000</span></p>
-                        
-                        <p>+12 Stars per second</p>
-                    </div>
-                </div>
-                <div class="bomb">
-                    <div class="containerImage">
-                        <img src="images/items/bomb.png" class="itemImage" style="width:100px;height:100px;">
-                        
-                        <div class="buyButtonContainer">
-                            
-                            <button onclick="buyBombs()" class="buyButton">Buy Bombs</button>
-                        </div>
-                    </div>
-                    
-                    <div class="containerText">
-                        <p>Bombs: <span id="bombsNum">0</span></p>
-                        
-                        <p>Bomb cost: <span id="bombCost">2,500</span></p>
-                        
-                        <p>+20 Stars per second</p>
-                    </div>
+                    <p>+1 Stars per second</p>
                 </div>
             </div>
-        </center>
+            <div class="drills">
+                    <div class="containerImage">
+                    <img src="images/items/drills.png" class="itemImage" style="width:100px;height:100px;">
+                    
+                    <div class="buyButtonContainer">
+                        
+                        <button onclick="buyDrills()" class="buyButton">Buy Drills</button>
+                    </div>
+                </div>
+                
+                <div class="containerText">
+                    <p>Drills: <span id="drillsNum">0</span></p>
+                    
+                    <p>Drills cost: <span id="drillsCost">250</span></p>
+                    
+                    <p>+4 Stars per second</p>
+                </div>
+            </div>
+            <div class="lasers">
+                <div class="containerImage">
+                    <img src="images/items/laser.png" class="itemImage" style="width:100px;height:100px;">
+                    
+                    <div class="buyButtonContainer">
+                        
+                        <button onclick="buyLasers()" class="buyButton">Buy Lasers</button>
+                    </div>
+                </div>
+                
+                <div class="containerText">
+                    <p>Lasers: <span id="lasersNum">0</span></p>
+                    
+                    <p>Laser cost: <span id="laserCost">1000</span></p>
+                    
+                    <p>+12 Stars per second</p>
+                </div>
+            </div>
+            <div class="bomb">
+                <div class="containerImage">
+                    <img src="images/items/bomb.png" class="itemImage" style="width:100px;height:100px;">
+                    
+                    <div class="buyButtonContainer">
+                        
+                        <button onclick="buyBombs()" class="buyButton">Buy Bombs</button>
+                    </div>
+                </div>
+                
+                <div class="containerText">
+                    <p>Bombs: <span id="bombsNum">0</span></p>
+                    
+                    <p>Bomb cost: <span id="bombCost">2,500</span></p>
+                    
+                    <p>+20 Stars per second</p>
+                </div>
+            </div>
+        </div>
     </body>
 </html>

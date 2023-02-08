@@ -10,7 +10,7 @@ var restartNum = 1000000000000000
 var minersCost = 50;
 var drillsCost = 250;
 var laserCost = 1000;
-var bombCost = 2500;
+var bombCost = 5000;
 
 //Amount of items
 var miners = 0;

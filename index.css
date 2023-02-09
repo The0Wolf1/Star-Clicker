@@ -71,7 +71,8 @@ p {
 }
 
 #restart-btn {
-    margin-top: 400px;
+    position: absolute;
+    left: 400px;
 }
 
 .itemContainer {

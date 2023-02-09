@@ -11,12 +11,14 @@ var minersCost = 50;
 var drillsCost = 250;
 var laserCost = 1000;
 var bombCost = 5000;
+var nukeCost = 25000;
 
 //Amount of items
 var miners = 0;
 var drills = 0;
 var lasers = 0;
 var bombs = 0;
+var nukes = 0;
 
 function increment() {
     stars += starsPerClick;
@@ -43,7 +45,7 @@ function buyMiners() {
     }
 }
 
-function buyDrills(){
+function buyDrills() {
     if (stars >= drillsCost){
         stars -= drillsCost;
         document.getElementById("showStars").innerHTML = stars;
@@ -73,7 +75,7 @@ function buyLasers() {
     }
 }
 
-function buyBombs(){
+function buyBombs() {
     if (stars >= bombCost){
         stars -= bombCost;
         document.getElementById("showStars").innerHTML = stars;
@@ -85,6 +87,21 @@ function buyBombs(){
         document.getElementById("showStarsPerSecond").innerHTML = starsPerSecond;
     } else {
         alert("You don't have enough stars!")
+    }
+}
+
+function buyNukes() {
+    if (stars >= nukeCost){
+        stars -= nukeCost;
+        document.getElementById("showStars").innerHTML = stars;
+        nukes++;
+        document.getElementById("nukeNum").innerHTML = nukes;
+        nukeCost *= 2;
+        document.getElementById("nukeCost").innerHTML = nukeCost;
+        starsPerSecond += 20;
+        document.getElementById("showStarsPerSecond").innerHTML = starsPerSecond;
+    } else {
+        alert("You don't have enough stars!");
     }
 }
 

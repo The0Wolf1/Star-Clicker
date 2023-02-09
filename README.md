@@ -19,3 +19,11 @@ The Frontend Developer Career Path aims to teach you everything you need to beco
 - [Become a Scrimba Pro member](https://scrimba.com/pricing)
 
 Happy Coding!
+
+# Personal Summary
+
+As you see, I've used Scrimba to learn how to do this. I also used a tutorial on replit.com, but sadly I can't find it.
+
+If you want to check out my game in your favourite browser, here's the link: https://teal-lolly-0dd156.netlify.app/
+
+Hope you enjoy the game :)

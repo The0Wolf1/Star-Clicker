@@ -39,6 +39,8 @@ p {
     border-radius: 8px;
     transition-duration: 0.3s;
     cursor: pointer;
+    position: absolute;
+    left: 100px;
 }
 
 #clickButton:hover {
@@ -78,6 +80,8 @@ p {
 .itemContainer {
   display: flex;
   flex-wrap: wrap;
+  position: absolute;
+  left: 1000px;
 }
 
 .item {

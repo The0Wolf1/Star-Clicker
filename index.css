@@ -84,6 +84,7 @@ p {
   flex-wrap: wrap;
   position: absolute;
   left: 600px;
+  top: 100px;
 }
 
 .item {

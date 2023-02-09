@@ -70,10 +70,8 @@ p {
 	color: white;
 }
 
-#gameOver {
-	font-size: 30px;
-	color: #3188cc;
-	font-style: italic;
+#restart-btn {
+    margin-top: 400px;
 }
 
 .itemContainer {

@@ -29,6 +29,12 @@ setInterval(function(){
     stars += starsPerSecond;
     document.getElementById("showStars").innerHTML = stars;
 
+    if(stars >= restartNum) {
+        restart();
+    } else {
+        document.getElementById("warning-txt").textContent = "You can't replace star yet"
+    }
+
     if(stars > 999) {
         document.getElementById("showStars").innerHTML = Math.floor(stars/ 1000) + "k"
     }
@@ -75,7 +81,7 @@ function buyMiners() {
         starsPerSecond += 1;
         document.getElementById("showStarsPerSecond").innerHTML = starsPerSecond;
     } else {
-        alert("You don't have enough stars!")
+        document.getElementById("warning-txt").textContent = "You don't have enough stars!"
     }
 }
 
@@ -90,7 +96,7 @@ function buyDrills() {
         starsPerSecond += 4;
         document.getElementById("showStarsPerSecond").innerHTML = starsPerSecond;
     } else {
-        alert("You don't have enough stars!")
+        document.getElementById("warning-txt").textContent = "You don't have enough stars!"
     }
 }
 
@@ -105,7 +111,7 @@ function buyLasers() {
         starsPerSecond += 12;
         document.getElementById("showStarsPerSecond").innerHTML = starsPerSecond;
     } else {
-        alert("You don't have enough stars!")
+        document.getElementById("warning-txt").textContent = "You don't have enough stars!"
     }
 }
 
@@ -120,7 +126,7 @@ function buyBombs() {
         starsPerSecond += 20;
         document.getElementById("showStarsPerSecond").innerHTML = starsPerSecond;
     } else {
-        alert("You don't have enough stars!")
+        document.getElementById("warning-txt").textContent = "You don't have enough stars!"
     }
 }
 
@@ -135,7 +141,7 @@ function buyNukes() {
         starsPerSecond += 20;
         document.getElementById("showStarsPerSecond").innerHTML = starsPerSecond;
     } else {
-        alert("You don't have enough stars!");
+        document.getElementById("warning-txt").textContent = "You don't have enough stars!"
     }
 }
 

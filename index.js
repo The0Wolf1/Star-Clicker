@@ -23,6 +23,10 @@ var nukes = 0;
 function increment() {
     stars += starsPerClick;
     document.getElementById("showStars").textCoinnerHTMLntent = stars;
+    if (stars >= restartNum) {
+        restart();
+    }
+
 }
 
 setInterval(function(){

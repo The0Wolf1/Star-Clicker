@@ -20,20 +20,6 @@ var lasers = 0;
 var bombs = 0;
 var nukes = 0;
 
-//Update the text of the variables
-document.getElementById("showStarsPerSecond").innerHTML = starsPerSecond;
-document.getElementById("minersNum").innerHTML = miners;
-document.getElementById("drillsNum").innerHTML = drills;
-document.getElementById("lasersNum").innerHTML = lasers;
-document.getElementById("bombsNum").innerHTML = bombs;
-document.getElementById("nukeNum").innerHTML = nukes;
-
-document.getElementById("minersCost").innerHTML = minersCost;
-document.getElementById("drillsCost").innerHTML = drillsCost;
-document.getElementById("laserCost").innerHTML = laserCost;
-document.getElementById("bombCost").innerHTML = bombCost;
-document.getElementById("nukeCost").innerHTML = nukeCost;
-
 function increment() {
     stars += starsPerClick;
     document.getElementById("showStars").innerHTML = stars;

@@ -177,4 +177,6 @@ function restart(){
     document.getElementById("laserCost").innerText = laserCost;
     document.getElementById("bombCost").innerText = bombCost;
     document.getElementById("nukeCost").innerText = nukeCost;
+
+    return stars;
 }

@@ -170,5 +170,5 @@ function restart(){
     document.getElementById("drillsNum").innerHTML = drills;
     document.getElementById("lasersNum").innerHTML = lasers;
     document.getElementById("bombsNum").innerHTML = bombs;
-    document.getElementById("nukesNum").innerHTML = nukes;
+    document.getElementById("nukeNum").innerHTML = nukes;
 }

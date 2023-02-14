@@ -24,10 +24,9 @@ function increment() {
     stars += starsPerClick;
     document.getElementById("showStars").innerHTML = stars;
 
-    new Intl.NumberFormat("pt-PT", {
-        style: "unit",
-        unit: "k"
-    }).format(stars)
+    if(stars >= 999) {
+        stars += "k"
+    }
 }
 
 setInterval(function(){

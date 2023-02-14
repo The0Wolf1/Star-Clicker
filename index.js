@@ -32,7 +32,7 @@ function increment() {
     }
 
     if (stars >= 1000 && stars < 1000000) {
-        document.getElementById("showStars").textContent = stars.slice(-3) + "k"
+        let thousand = stars.toString().padStart(1, 'k')
     }
 
 }

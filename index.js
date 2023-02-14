@@ -25,7 +25,7 @@ function increment() {
     document.getElementById("showStars").innerHTML = stars;
 
     if(stars >= 999) {
-        document.getElementById("showStars").innterHTML = stars.format(-3, "k");
+        document.getElementById("showStars").textContent = stars.format(-3, "k");
     }
 }
 

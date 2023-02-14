@@ -165,16 +165,16 @@ function restart(){
     var nukes = 0;
 
     return stars;
-    return starsPerSecond;
-    return miners;
-    return drills;
-    return lasers;
-    return bombs;
-    return nukes;
+    document.getElementById("showStarsPerSecond").innerText = starsPerSecond;
+    document.getElementById("minersNum").innerText = miners;
+    document.getElementById("drillsNum").innerText = drills;
+    document.getElementById("lasersNum").innerText = lasers;
+    document.getElementById("bombsNum").innerText = bombs;
+    document.getElementById("nukeNum").innerText = nukes;
 
-    return minersCost;
-    return drillsCost;
-    return laserCost;
-    return bombCost;
-    return nukeCost;
+    document.getElementById("minersCost").innerText = minersCost;
+    document.getElementById("drillsCost").innerText = drillsCost;
+    document.getElementById("laserCost").innerText = laserCost;
+    document.getElementById("bombCost").innerText = bombCost;
+    document.getElementById("nukeCost").innerText = nukeCost;
 }

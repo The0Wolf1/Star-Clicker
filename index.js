@@ -121,17 +121,20 @@ function restart(){
     var minersCost = 50;
     var drillsCost = 250;
     var laserCost = 1000;
-    var bombCost = 2500;
+    var bombCost = 5000;
+    var nukeCost = 25000;
 
     //Reset the amount of items
     var miners = 0;
     var drills = 0;
     var lasers = 0;
     var bombs = 0;
-    
+    var nukes = 0;
+
     document.getElementById("showStars").innerHTML = stars;
     document.getElementById("minersNum").innerHTML = miners;
     document.getElementById("drillsNum").innerHTML = drills;
     document.getElementById("lasersNum").innerHTML = lasers;
     document.getElementById("bombsNum").innerHTML = bombs;
+    document.getElementById("nukesNum").innerHTML = nukes;
 }

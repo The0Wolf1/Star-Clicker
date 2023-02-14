@@ -23,17 +23,18 @@ var nukes = 0;
 function increment() {
     stars += starsPerClick;
     document.getElementById("showStars").innerHTML = stars;
-}
 
-setInterval(function(){
-    stars += starsPerSecond;
-    document.getElementById("showStars").innerHTML = stars;
     //If-statement for restart
     if (stars >= restartNum) {
         restart();
     } else {
         document.getElementById("warning-txt").textContent = "You can't do that";
     }
+}
+
+setInterval(function(){
+    stars += starsPerSecond;
+    document.getElementById("showStars").innerHTML = stars;
 
     if(stars > 999) {
         document.getElementById("showStars").innerHTML = Math.floor(stars/ 1000) + "k"
@@ -146,10 +147,9 @@ function buyNukes() {
 }
 
 function restart(){
-    //Reset the variables to 0 (or 1 for the click)
+    //Reset the variables to 0
     var stars = 0;
     var starsPerSecond = 0;
-    var starsPerClick = 1;
 
     //Reset the cost of items
     var minersCost = 50;

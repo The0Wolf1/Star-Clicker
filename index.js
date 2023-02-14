@@ -139,7 +139,7 @@ function buyNukes() {
     }
 }
 
-function canRestart() {
+function restartGame() {
     if(stars >= restartNum) {
         restart();
     } else {

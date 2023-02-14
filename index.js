@@ -22,12 +22,12 @@ var nukes = 0;
 
 function increment() {
     stars += starsPerClick;
-    document.getElementById("showStars").innerHTML = stars;
+    document.getElementById("showStars").textContent = stars;
 }
 
 setInterval(function(){
     stars += starsPerSecond;
-    document.getElementById("showStars").innerHTML = stars;
+    document.getElementById("showStars").textContent = stars;
 
     if(stars >= restartNum) {
         restart();
@@ -36,50 +36,50 @@ setInterval(function(){
     }
 
     if(stars > 999) {
-        document.getElementById("showStars").innerHTML = Math.floor(stars/ 1000) + "k"
+        document.getElementById("showStars").textContent = Math.floor(stars/ 1000) + "k"
     }
     if (stars > 999999) {
-        document.getElementById("showStars").innerHTML = Math.floor(stars/ 10**6) + "M"
+        document.getElementById("showStars").textContent = Math.floor(stars/ 10**6) + "M"
     }
     if (stars > 999999999) {
-        document.getElementById("showStars").innerHTML = Math.floor(stars/ 10**9) + "b"
+        document.getElementById("showStars").textContent = Math.floor(stars/ 10**9) + "b"
     }
     if (stars > 99999999999) {
-        document.getElementById("showStars").innerHTML = Math.floor(stars/ 10**12) + "t"
+        document.getElementById("showStars").textContent = Math.floor(stars/ 10**12) + "t"
     }
     if (stars > 999999999999999) {
-        document.getElementById("showStars").innerHTML = Math.floor(stars/ 10**15) + "Qua"
+        document.getElementById("showStars").textContent = Math.floor(stars/ 10**15) + "Qua"
     }
     if (stars > 999999999999999999) {
-        document.getElementById("showStars").innerHTML = Math.floor(stars/ 10**17) + "Qui"
+        document.getElementById("showStars").textContent = Math.floor(stars/ 10**17) + "Qui"
     }
     if (stars > 999999999999999999999) {
-        document.getElementById("showStars").innerHTML = Math.floor(stars/ 10**21) + "Sex"
+        document.getElementById("showStars").textContent = Math.floor(stars/ 10**21) + "Sex"
     }
     if (stars > 999999999999999999999999) {
-        document.getElementById("showStars").innerHTML = Math.floor(stars/ 10**24) + "Sep"
+        document.getElementById("showStars").textContent = Math.floor(stars/ 10**24) + "Sep"
     }
     if (stars > 999999999999999999999999999) {
-        document.getElementById("showStars").innerHTML = Math.floor(stars/ 10**27) + "Oct"
+        document.getElementById("showStars").textContent = Math.floor(stars/ 10**27) + "Oct"
     }
     if (stars > 999999999999999999999999999999) {
-        document.getElementById("showStars").innerHTML = Math.floor(stars/ 10**30) + "Non"
+        document.getElementById("showStars").textContent = Math.floor(stars/ 10**30) + "Non"
     }
     if (stars > 999999999999999999999999999999999) {
-        document.getElementById("showStars").innerHTML = Math.floor(stars/ 10**33) + "Dec"
+        document.getElementById("showStars").textContent = Math.floor(stars/ 10**33) + "Dec"
     }
 }, 300)
 
 function buyMiners() {
     if (stars >= minersCost){
         stars -= minersCost;
-        document.getElementById("showStars").innerHTML = stars;
+        document.getElementById("showStars").textContent = stars;
         miners++;
-        document.getElementById("minersNum").innerHTML = miners;
+        document.getElementById("minersNum").textContent = miners;
         minersCost *= 2;
-        document.getElementById("minersCost").innerHTML = minersCost;
+        document.getElementById("minersCost").textContent = minersCost;
         starsPerSecond += 1;
-        document.getElementById("showStarsPerSecond").innerHTML = starsPerSecond;
+        document.getElementById("showStarsPerSecond").textContent = starsPerSecond;
     } else {
         document.getElementById("warning-txt").textContent = "You don't have enough stars!"
     }
@@ -88,13 +88,13 @@ function buyMiners() {
 function buyDrills() {
     if (stars >= drillsCost){
         stars -= drillsCost;
-        document.getElementById("showStars").innerHTML = stars;
+        document.getElementById("showStars").textContent = stars;
         drills++;
-        document.getElementById("drillsNum").innerHTML = drills;
+        document.getElementById("drillsNum").textContent = drills;
         drillsCost *= 2;
-        document.getElementById("drillsCost").innerHTML = drillsCost;
+        document.getElementById("drillsCost").textContent = drillsCost;
         starsPerSecond += 4;
-        document.getElementById("showStarsPerSecond").innerHTML = starsPerSecond;
+        document.getElementById("showStarsPerSecond").textContent = starsPerSecond;
     } else {
         document.getElementById("warning-txt").textContent = "You don't have enough stars!"
     }
@@ -103,13 +103,13 @@ function buyDrills() {
 function buyLasers() {
     if (stars >= laserCost){
         stars -= laserCost;
-        document.getElementById("showStars").innerHTML = stars;
+        document.getElementById("showStars").textContent = stars;
         lasers++;
-        document.getElementById("lasersNum").innerHTML = lasers;
+        document.getElementById("lasersNum").textContent = lasers;
         laserCost *= 2;
-        document.getElementById("laserCost").innerHTML = laserCost;
+        document.getElementById("laserCost").textContent = laserCost;
         starsPerSecond += 12;
-        document.getElementById("showStarsPerSecond").innerHTML = starsPerSecond;
+        document.getElementById("showStarsPerSecond").textContent = starsPerSecond;
     } else {
         document.getElementById("warning-txt").textContent = "You don't have enough stars!"
     }
@@ -118,13 +118,13 @@ function buyLasers() {
 function buyBombs() {
     if (stars >= bombCost){
         stars -= bombCost;
-        document.getElementById("showStars").innerHTML = stars;
+        document.getElementById("showStars").textContent = stars;
         bombs++;
-        document.getElementById("bombsNum").innerHTML = bombs;
+        document.getElementById("bombsNum").textContent = bombs;
         bombCost *= 2;
-        document.getElementById("bombCost").innerHTML = bombCost;
+        document.getElementById("bombCost").textContent = bombCost;
         starsPerSecond += 20;
-        document.getElementById("showStarsPerSecond").innerHTML = starsPerSecond;
+        document.getElementById("showStarsPerSecond").textContent = starsPerSecond;
     } else {
         document.getElementById("warning-txt").textContent = "You don't have enough stars!"
     }
@@ -133,13 +133,13 @@ function buyBombs() {
 function buyNukes() {
     if (stars >= nukeCost){
         stars -= nukeCost;
-        document.getElementById("showStars").innerHTML = stars;
+        document.getElementById("showStars").textContent = stars;
         nukes++;
-        document.getElementById("nukeNum").innerHTML = nukes;
+        document.getElementById("nukeNum").textContent = nukes;
         nukeCost *= 2;
-        document.getElementById("nukeCost").innerHTML = nukeCost;
+        document.getElementById("nukeCost").textContent = nukeCost;
         starsPerSecond += 20;
-        document.getElementById("showStarsPerSecond").innerHTML = starsPerSecond;
+        document.getElementById("showStarsPerSecond").textContent = starsPerSecond;
     } else {
         document.getElementById("warning-txt").textContent = "You don't have enough stars!"
     }
@@ -164,17 +164,17 @@ function restart(){
     var bombs = 0;
     var nukes = 0;
 
-    document.getElementById("showStars").innerHTML = stars;
-    document.getElementById("showStarsPerSecond").innerHTML = starsPerSecond;
-    document.getElementById("minersNum").innerHTML = miners;
-    document.getElementById("drillsNum").innerHTML = drills;
-    document.getElementById("lasersNum").innerHTML = lasers;
-    document.getElementById("bombsNum").innerHTML = bombs;
-    document.getElementById("nukeNum").innerHTML = nukes;
+    document.getElementById("showStars").textContent = stars;
+    document.getElementById("showStarsPerSecond").textContent = starsPerSecond;
+    document.getElementById("minersNum").textContent = miners;
+    document.getElementById("drillsNum").textContent = drills;
+    document.getElementById("lasersNum").textContent = lasers;
+    document.getElementById("bombsNum").textContent = bombs;
+    document.getElementById("nukeNum").textContent = nukes;
 
-    document.getElementById("minersCost").innerHTML = minersCost;
-    document.getElementById("drillsCost").innerHTML = drillsCost;
-    document.getElementById("laserCost").innerHTML = laserCost;
-    document.getElementById("bombCost").innerHTML = bombCost;
-    document.getElementById("nukeCost").innerHTML = nukeCost;
+    document.getElementById("minersCost").textContent = minersCost;
+    document.getElementById("drillsCost").textContent = drillsCost;
+    document.getElementById("laserCost").textContent = laserCost;
+    document.getElementById("bombCost").textContent = bombCost;
+    document.getElementById("nukeCost").textContent = nukeCost;
 }

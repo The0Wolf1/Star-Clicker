@@ -22,11 +22,17 @@ var nukes = 0;
 
 function increment() {
     stars += starsPerClick;
-    document.getElementById("showStars").textCoinnerHTMLntent = stars;
+    document.getElementById("showStars").innerHTML = stars;
+    
+    //If-statement for restart
     if (stars >= restartNum) {
         restart();
     } else {
         document.getElementById("warning-txt").textContent = "You can't do that";
+    }
+
+    if (stars >= 1000 && stars < 1000000) {
+        document.getElementById("showStars").textContent = stars.slice(-3) + "k"
     }
 
 }

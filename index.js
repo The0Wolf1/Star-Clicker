@@ -25,6 +25,8 @@ function increment() {
     document.getElementById("showStars").textCoinnerHTMLntent = stars;
     if (stars >= restartNum) {
         restart();
+    } else {
+        document.getElementById("warning-txt").textContent = "You can't do that";
     }
 
 }
@@ -110,30 +112,26 @@ function buyNukes() {
 }
 
 function restart(){
-    if (stars >= restartNum) {
-        //Reset the variables to 0 (or 1 for the click)
-        var stars = 0;
-        var starsPerSecond = 0;
-        var starsPerClick = 1;
+    //Reset the variables to 0 (or 1 for the click)
+    var stars = 0;
+    var starsPerSecond = 0;
+    var starsPerClick = 1;
 
-        //Reset the cost of items
-        var minersCost = 50;
-        var drillsCost = 250;
-        var laserCost = 1000;
-        var bombCost = 2500;
+    //Reset the cost of items
+    var minersCost = 50;
+    var drillsCost = 250;
+    var laserCost = 1000;
+    var bombCost = 2500;
 
-        //Reset the amount of items
-        var miners = 0;
-        var drills = 0;
-        var lasers = 0;
-        var bombs = 0;
-        
-        document.getElementById("showStars").innerHTML = stars;
-        document.getElementById("minersNum").innerHTML = miners;
-        document.getElementById("drillsNum").innerHTML = drills;
-        document.getElementById("lasersNum").innerHTML = lasers;
-        document.getElementById("bombsNum").innerHTML = bombs;
-    } else {
-        alert("You can't replace the star yet")
-    }
+    //Reset the amount of items
+    var miners = 0;
+    var drills = 0;
+    var lasers = 0;
+    var bombs = 0;
+    
+    document.getElementById("showStars").innerHTML = stars;
+    document.getElementById("minersNum").innerHTML = miners;
+    document.getElementById("drillsNum").innerHTML = drills;
+    document.getElementById("lasersNum").innerHTML = lasers;
+    document.getElementById("bombsNum").innerHTML = bombs;
 }

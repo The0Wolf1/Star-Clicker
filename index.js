@@ -23,80 +23,50 @@ var nukes = 0;
 function increment() {
     stars += starsPerClick;
     document.getElementById("showStars").innerHTML = stars;
-
-    if(stars > 999) {
-        document.getElementById("showStars").innerHTML = Math.floor(stars/ 100) + "k"
-    }
-    if (stars > 999999) {
-        document.getElementById("showStars").innerHTML = Math.floor(stars/ 10**5) + "M"
-    }
-    if (stars > 999999999) {
-        document.getElementById("showStars").innerHTML = Math.floor(stars/ 10**8) + "b"
-    }
-    if (stars > 99999999999) {
-        document.getElementById("showStars").innerHTML = Math.floor(stars/ 10**11) + "t"
-    }
-    if (stars > 999999999999999) {
-        document.getElementById("showStars").innerHTML = Math.floor(stars/ 10**14) + "Qua"
-    }
-    if (stars > 999999999999999999) {
-        document.getElementById("showStars").innerHTML = Math.floor(stars/ 10**16) + "Qui"
-    }
-    if (stars > 999999999999999999999) {
-        document.getElementById("showStars").innerHTML = Math.floor(stars/ 10**20) + "Sex"
-    }
-    if (stars > 999999999999999999999999) {
-        document.getElementById("showStars").innerHTML = Math.floor(stars/ 10**23) + "Sep"
-    }
-    if (stars > 999999999999999999999999999) {
-        document.getElementById("showStars").innerHTML = Math.floor(stars/ 10**26) + "Oct"
-    }
-    if (stars > 999999999999999999999999999999) {
-        document.getElementById("showStars").innerHTML = Math.floor(stars/ 10**29) + "Non"
-    }
-    if (stars > 999999999999999999999999999999999) {
-        document.getElementById("showStars").innerHTML = Math.floor(stars/ 10**32) + "Dec"
-    }
+    shortenNums();
 }
 
 setInterval(function(){
     stars += starsPerSecond;
     document.getElementById("showStars").innerHTML = stars;
+    shortenNums();
+}, 300)
 
+function shortenNums() {
     if(stars > 999) {
-        document.getElementById("showStars").innerHTML = Math.floor(stars/ 100) + "k"
+        document.getElementById("showStars").innerHTML = Math.floor(stars/ 1000) + "k"
     }
     if (stars > 999999) {
-        document.getElementById("showStars").innerHTML = Math.floor(stars/ 10**5) + "M"
+        document.getElementById("showStars").innerHTML = Math.floor(stars/ 10**6) + "M"
     }
     if (stars > 999999999) {
-        document.getElementById("showStars").innerHTML = Math.floor(stars/ 10**8) + "b"
+        document.getElementById("showStars").innerHTML = Math.floor(stars/ 10**9) + "b"
     }
     if (stars > 99999999999) {
-        document.getElementById("showStars").innerHTML = Math.floor(stars/ 10**11) + "t"
+        document.getElementById("showStars").innerHTML = Math.floor(stars/ 10**12) + "t"
     }
     if (stars > 999999999999999) {
-        document.getElementById("showStars").innerHTML = Math.floor(stars/ 10**14) + "Qua"
+        document.getElementById("showStars").innerHTML = Math.floor(stars/ 10**15) + "Qua"
     }
     if (stars > 999999999999999999) {
-        document.getElementById("showStars").innerHTML = Math.floor(stars/ 10**16) + "Qui"
+        document.getElementById("showStars").innerHTML = Math.floor(stars/ 10**17) + "Qui"
     }
     if (stars > 999999999999999999999) {
-        document.getElementById("showStars").innerHTML = Math.floor(stars/ 10**20) + "Sex"
+        document.getElementById("showStars").innerHTML = Math.floor(stars/ 10**21) + "Sex"
     }
     if (stars > 999999999999999999999999) {
-        document.getElementById("showStars").innerHTML = Math.floor(stars/ 10**23) + "Sep"
+        document.getElementById("showStars").innerHTML = Math.floor(stars/ 10**24) + "Sep"
     }
     if (stars > 999999999999999999999999999) {
-        document.getElementById("showStars").innerHTML = Math.floor(stars/ 10**26) + "Oct"
+        document.getElementById("showStars").innerHTML = Math.floor(stars/ 10**27) + "Oct"
     }
     if (stars > 999999999999999999999999999999) {
-        document.getElementById("showStars").innerHTML = Math.floor(stars/ 10**29) + "Non"
+        document.getElementById("showStars").innerHTML = Math.floor(stars/ 10**30) + "Non"
     }
     if (stars > 999999999999999999999999999999999) {
-        document.getElementById("showStars").innerHTML = Math.floor(stars/ 10**32) + "Dec"
+        document.getElementById("showStars").innerHTML = Math.floor(stars/ 10**33) + "Dec"
     }
-}, 300)
+}
 
 function buyMiners() {
     if (stars >= minersCost){

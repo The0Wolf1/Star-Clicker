@@ -37,6 +37,10 @@ setInterval(function(){
 
     if(stars > 999) {
         document.getElementById("showStars").innerHTML = Math.floor(stars/ 1000) + "k"
+    } else if (stars > 999999) {
+        document.getElementById("showStars").innerHTML = Math.floor(stars/ 1000000) + "M"
+    } else if (stars > 999999999999) {
+        document.getElementById("showStars").innerHTML = Math.floor(stars/ 1000000000000) + "b"
     }
 }, 300)
 

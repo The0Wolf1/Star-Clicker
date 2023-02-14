@@ -78,6 +78,7 @@ function buyMiners() {
         document.getElementById("minersCost").innerHTML = minersCost;
         starsPerSecond += 1;
         document.getElementById("showStarsPerSecond").innerHTML = starsPerSecond;
+        shortenNumber();
     } else {
         document.getElementById("warning-txt").textContent = "You don't have enough stars!"
     }
@@ -93,6 +94,7 @@ function buyDrills() {
         document.getElementById("drillsCost").innerHTML = drillsCost;
         starsPerSecond += 4;
         document.getElementById("showStarsPerSecond").innerHTML = starsPerSecond;
+        shortenNumber();
     } else {
         document.getElementById("warning-txt").textContent = "You don't have enough stars!"
     }
@@ -108,6 +110,7 @@ function buyLasers() {
         document.getElementById("laserCost").innerHTML = laserCost;
         starsPerSecond += 12;
         document.getElementById("showStarsPerSecond").innerHTML = starsPerSecond;
+        shortenNumber();
     } else {
         document.getElementById("warning-txt").textContent = "You don't have enough stars!"
     }
@@ -123,6 +126,7 @@ function buyBombs() {
         document.getElementById("bombCost").innerHTML = bombCost;
         starsPerSecond += 20;
         document.getElementById("showStarsPerSecond").innerHTML = starsPerSecond;
+        shortenNumber();
     } else {
         document.getElementById("warning-txt").textContent = "You don't have enough stars!"
     }
@@ -138,6 +142,7 @@ function buyNukes() {
         document.getElementById("nukeCost").innerHTML = nukeCost;
         starsPerSecond += 20;
         document.getElementById("showStarsPerSecond").innerHTML = starsPerSecond;
+        shortenNumber();
     } else {
         document.getElementById("warning-txt").textContent = "You don't have enough stars!"
     }

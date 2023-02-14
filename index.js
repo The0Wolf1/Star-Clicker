@@ -23,6 +23,40 @@ var nukes = 0;
 function increment() {
     stars += starsPerClick;
     document.getElementById("showStars").innerHTML = stars;
+
+    if(stars > 999) {
+        document.getElementById("showStars").innerHTML = Math.floor(stars/ 1000) + "k"
+    }
+    if (stars > 999999) {
+        document.getElementById("showStars").innerHTML = Math.floor(stars/ 10**6) + "M"
+    }
+    if (stars > 999999999) {
+        document.getElementById("showStars").innerHTML = Math.floor(stars/ 10**9) + "b"
+    }
+    if (stars > 99999999999) {
+        document.getElementById("showStars").innerHTML = Math.floor(stars/ 10**12) + "t"
+    }
+    if (stars > 999999999999999) {
+        document.getElementById("showStars").innerHTML = Math.floor(stars/ 10**15) + "Qua"
+    }
+    if (stars > 999999999999999999) {
+        document.getElementById("showStars").innerHTML = Math.floor(stars/ 10**17) + "Qui"
+    }
+    if (stars > 999999999999999999999) {
+        document.getElementById("showStars").innerHTML = Math.floor(stars/ 10**21) + "Sex"
+    }
+    if (stars > 999999999999999999999999) {
+        document.getElementById("showStars").innerHTML = Math.floor(stars/ 10**24) + "Sep"
+    }
+    if (stars > 999999999999999999999999999) {
+        document.getElementById("showStars").innerHTML = Math.floor(stars/ 10**27) + "Oct"
+    }
+    if (stars > 999999999999999999999999999999) {
+        document.getElementById("showStars").innerHTML = Math.floor(stars/ 10**30) + "Non"
+    }
+    if (stars > 999999999999999999999999999999999) {
+        document.getElementById("showStars").innerHTML = Math.floor(stars/ 10**33) + "Dec"
+    }
 }
 
 setInterval(function(){

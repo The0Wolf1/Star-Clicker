@@ -29,12 +29,6 @@ setInterval(function(){
     stars += starsPerSecond;
     document.getElementById("showStars").innerHTML = stars;
 
-    if(stars >= restartNum) {
-        restart();
-    } else {
-        document.getElementById("warning-txt").textContent = "You can't replace star yet"
-    }
-
     if(stars > 999) {
         document.getElementById("showStars").innerHTML = Math.floor(stars/ 1000) + "k"
     }
@@ -145,10 +139,21 @@ function buyNukes() {
     }
 }
 
+function canRestart() {
+    if(stars >= restartNum) {
+        restart();
+    } else {
+        document.getElementById("warning-txt").textContent = "You can't replace star yet"
+    }
+}
+
 function restart(){
     //Reset the variables to 0
     stars = 0;
     starsPerSecond = 0;
+
+    //Reset the restart number
+    restartNum = 10**15
 
     //Reset the cost of items
     minersCost = 50;

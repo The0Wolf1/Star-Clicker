@@ -36,7 +36,7 @@ setInterval(function(){
     }
 
     if(stars >= 999) {
-        new Intl.NumberFormat().format(stars);
+        document.getElementById("showStars").textContent = stars + "k"
     }
 }, 300)
 

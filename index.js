@@ -21,7 +21,6 @@ var bombs = 0;
 var nukes = 0;
 
 //Update the text of the variables
-document.getElementById("showStars").innerHTML = stars;
 document.getElementById("showStarsPerSecond").innerHTML = starsPerSecond;
 document.getElementById("minersNum").innerHTML = miners;
 document.getElementById("drillsNum").innerHTML = drills;

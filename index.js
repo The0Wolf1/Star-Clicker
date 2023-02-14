@@ -147,22 +147,22 @@ function buyNukes() {
 
 function restart(){
     //Reset the variables to 0
-    var stars = 0;
-    var starsPerSecond = 0;
+    stars = 0;
+    starsPerSecond = 0;
 
     //Reset the cost of items
-    var minersCost = 50;
-    var drillsCost = 250;
-    var laserCost = 1000;
-    var bombCost = 5000;
-    var nukeCost = 25000;
+    minersCost = 50;
+    drillsCost = 250;
+    laserCost = 1000;
+    bombCost = 5000;
+    nukeCost = 25000;
 
     //Reset the amount of items
-    var miners = 0;
-    var drills = 0;
-    var lasers = 0;
-    var bombs = 0;
-    var nukes = 0;
+    miners = 0;
+    drills = 0;
+    lasers = 0;
+    bombs = 0;
+    nukes = 0;
 
     document.getElementById("showStars").innerHTML = stars;
     document.getElementById("showStarsPerSecond").innerHTML = starsPerSecond;

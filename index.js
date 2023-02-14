@@ -23,16 +23,16 @@ var nukes = 0;
 function increment() {
     stars += starsPerClick;
     document.getElementById("showStars").innerHTML = stars;
-    shortenNums();
+    shortenNumber();
 }
 
 setInterval(function(){
     stars += starsPerSecond;
     document.getElementById("showStars").innerHTML = stars;
-    shortenNums();
+    shortenNumber();
 }, 300)
 
-function shortenNums() {
+function shortenNumber() {
     if(stars > 999) {
         document.getElementById("showStars").innerHTML = Math.floor(stars/ 1000) + "k"
     }

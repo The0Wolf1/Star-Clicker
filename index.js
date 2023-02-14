@@ -23,14 +23,6 @@ var nukes = 0;
 function increment() {
     stars += starsPerClick;
     document.getElementById("showStars").innerHTML = stars;
-
-    if (stars >= 1000) {
-        stars =(stars/1000)+"k"
-    } else if (stars >= 1000000) {
-        stars=(stars/1000000)
-    }
-    return stars;
-
 }
 
 setInterval(function(){
@@ -42,6 +34,14 @@ setInterval(function(){
     } else {
         document.getElementById("warning-txt").textContent = "You can't do that";
     }
+
+    if (stars >= 1000) {
+        stars =(stars/1000)+"k"
+    } else if (stars >= 1000000) {
+        stars=(stars/1000000)
+    }
+    return stars;
+    
 }, 300)
 
 function buyMiners() {

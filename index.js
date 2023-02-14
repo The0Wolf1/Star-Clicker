@@ -23,10 +23,6 @@ var nukes = 0;
 function increment() {
     stars += starsPerClick;
     document.getElementById("showStars").innerHTML = stars;
-
-    if(stars >= 999) {
-        document.getElementById("showStars").innerHTML = stars(format(-3, "k"));
-    }
 }
 
 setInterval(function(){
@@ -37,6 +33,10 @@ setInterval(function(){
         restart();
     } else {
         document.getElementById("warning-txt").textContent = "You can't do that";
+    }
+
+    if(stars >= 999) {
+        new Intl.NumberFormat().format(stars);
     }
 }, 300)
 

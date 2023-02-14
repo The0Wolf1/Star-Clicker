@@ -31,9 +31,12 @@ function increment() {
         document.getElementById("warning-txt").textContent = "You can't do that";
     }
 
-    if (stars >= 1000 && stars < 1000000) {
-        let thousand = stars.toString().padStart(1, 'k')
+    if (stars >= 1000) {
+        stars =(stars/1000)+"k"
+    } else if (stars >= 1000000) {
+        stars=(stars/1000000)
     }
+    return stars;
 
 }
 

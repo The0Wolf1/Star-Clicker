@@ -35,8 +35,8 @@ setInterval(function(){
         document.getElementById("warning-txt").textContent = "You can't do that";
     }
 
-    if(stars >= 999) {
-        document.getElementById("showStars").textContent = stars + "k"
+    if(stars > 999) {
+        document.getElementById("showStars").innerHTML = stars + "k"
     }
 }, 300)
 

@@ -4,7 +4,7 @@ var starsPerSecond = 0;
 var starsPerClick = 1;
 
 //Goal variable for restart
-var restartNum = 1000000000000000
+var restartNum = 10**15
 
 //Cost of items
 var minersCost = 50;

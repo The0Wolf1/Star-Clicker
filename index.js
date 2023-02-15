@@ -192,3 +192,23 @@ function restart(){
     document.getElementById("bombCost").innerHTML = bombCost;
     document.getElementById("nukeCost").innerHTML = nukeCost;
 }
+
+function save() {
+    var saveInfo = {
+        stars: stars,
+        starsPerSecond: starsPerSecond,
+        miners: miners,
+        drills: drills,
+        lasers: lasers,
+        bombs: bombs,
+        nukes: nukes,
+        minersCost: minersCost,
+        drillsCost: drillsCost,
+        laserCost: laserCost,
+        bombCost: bombCost,
+        nukeCost: nukeCost
+      }
+      
+      window.localStorage.setItem("save", JSON.stringify(saveInfo));
+      let newObject = window.localStorage.getItem("save");
+}

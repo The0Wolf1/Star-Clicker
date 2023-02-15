@@ -30,7 +30,6 @@ setInterval(function(){
     stars += starsPerSecond;
     document.getElementById("showStars").innerHTML = stars;
     shortenNumber();
-    save();
 }, 300)
 
 function shortenNumber() {
@@ -192,27 +191,4 @@ function restart(){
     document.getElementById("laserCost").innerHTML = laserCost;
     document.getElementById("bombCost").innerHTML = bombCost;
     document.getElementById("nukeCost").innerHTML = nukeCost;
-}
-
-function save(){
-    var save = {
-        stars: stars,
-        starsPerSecond: starsPerSecond,
-        miners: miners,
-        drills: drills,
-        lasers: lasers,
-        bombs: bombs,
-        nukes: nukes,
-        minersCost: minersCost,
-        drillsCost: drillsCost,
-        laserCost: laserCost,
-        nukeCost: nukeCost
-    }
-    localStorage.setItem("save",JSON.stringify(save));
-    ga('send', 'event', 'My Game', 'Save');
-}
-
-function load(){
-    var savegame = JSON.parse(localStorage.getItem("save"));
-    if (typeof savegame.cookies !== "undefined") cookies = savegame.cookies;
 }

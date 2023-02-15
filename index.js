@@ -30,6 +30,7 @@ setInterval(function(){
     stars += starsPerSecond;
     document.getElementById("showStars").innerHTML = stars;
     shortenNumber();
+    save();
 }, 300)
 
 function shortenNumber() {

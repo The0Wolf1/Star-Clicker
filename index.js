@@ -211,5 +211,9 @@ function save() {
       }
       
       window.localStorage.setItem("save", JSON.stringify(saveInfo));
-      let newObject = window.localStorage.getItem("save");
+      
+}
+
+function load(){
+    let newObject = window.localStorage.getItem("save");
 }

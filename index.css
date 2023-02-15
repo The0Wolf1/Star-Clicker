@@ -125,13 +125,6 @@ p {
 	opacity: 0.7;
 }
 
-.block {
-	display: block;
-	padding: 5px;
-	margin: 10px;
-	border: 1px solid #333;
-}
-
 @media (max-width: 800px) { 
   .item {
     flex: 100%; /* makes one item on each line */

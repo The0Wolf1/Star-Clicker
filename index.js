@@ -30,6 +30,7 @@ setInterval(function(){
     stars += starsPerSecond;
     document.getElementById("showStars").innerHTML = stars;
     shortenNumber();
+    save();
 }, 300)
 
 function shortenNumber() {
@@ -213,4 +214,5 @@ function save(){
 
 function load(){
     var savegame = JSON.parse(localStorage.getItem("save"));
+    if (typeof savegame.cookies !== "undefined") cookies = savegame.cookies;
 }

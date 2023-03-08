@@ -20,6 +20,7 @@ var lasers = 0;
 var bombs = 0;
 var nukes = 0;
 
+var msPerSave = 60000;
 var saveGameInterval = setInterval(saveGame, msPerSave);
 
 function init() {

@@ -20,7 +20,14 @@ var lasers = 0;
 var bombs = 0;
 var nukes = 0;
 
-var saveInfo = Array['Save'];
+var saveGameInterval = setInterval(saveGame, msPerSave);
+
+function init() {
+    let x = document.cookie;
+    if(x.length > 0){
+        restoreGame(x);
+    }
+}
 
 function increment() {
     stars += starsPerClick;

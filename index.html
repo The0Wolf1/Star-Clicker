@@ -1,113 +1,35 @@
-<!doctype html>
-<html>
-    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Star Clicker</title>
-        <link rel="stylesheet" href="index.css">
-        <link rel="icon" type="image/png" sizes="32x32" href="images/star.png">
+        <script defer src="scripts/index.js"></script>
+        <script src="scripts/model.js"></script>
+        <link rel="stylesheet" href="styles/styles.css">
     </head>
-    <body>
-        <script src="index.js"></script>
-        <button id="restart-btn" onclick="restartGame()">Replace Star</button>
-        <p id="warning-txt"></p>
-        <center>
-            <img src="images/star.png" id="clickButton" onclick="increment()">
-            <div id="info">
-                <p id="starCounter">Stars Collected: <span id="showStars" class="number">0</span></p>
-                <p>Stars per second: <span id="showStarsPerSecond" class="number">0</span></p>
-                <p>Stars per click: <span id="showStarsPerClick" class="number">1</span></p>
+    <body onload="init()" class="text">
+        <div class="grid-container">
+            <div id="star-div" class="grid-item" onclick="clickedStar()">
+                <img src="/images/star.png" id="star-img" class="img">
+                <div id="showStars"></div>
             </div>
-            <div class="itemContainer">
-                <div class="miners">
-                    <div class="containerImage">
-                        <img src="images/items/pickaxe.png" class="itemImage" style="width:100px;height:100px;">
-                        
-                        <div class="buyButtonContainer">
-                            
-                            <button onclick="buyMiners()" class="buyButton">Buy Miners</button>
-                        </div>
-                    </div>
-                    
-                    <div class="containerText">
-                        <p>Miners: <span id="minersNum">0</span></p>
-                        
-                        <p>Miners cost: <span id="minersCost">50</span></p>
-                        
-                        <p>+1 Stars per second</p>
-                    </div>
-                </div>
-                <div class="drills">
-                        <div class="containerImage">
-                        <img src="images/items/drills.png" class="itemImage" style="width:100px;height:100px;">
-                        
-                        <div class="buyButtonContainer">
-                            
-                            <button onclick="buyDrills()" class="buyButton">Buy Drills</button>
-                        </div>
-                    </div>
-                    
-                    <div class="containerText">
-                        <p>Drills: <span id="drillsNum">0</span></p>
-                        
-                        <p>Drills cost: <span id="drillsCost">250</span></p>
-                        
-                        <p>+4 Stars per second</p>
-                    </div>
-                </div>
-                <div class="lasers">
-                    <div class="containerImage">
-                        <img src="images/items/laser.png" class="itemImage" style="width:100px;height:100px;">
-                        
-                        <div class="buyButtonContainer">
-                            
-                            <button onclick="buyLasers()" class="buyButton">Buy Lasers</button>
-                        </div>
-                    </div>
-                    
-                    <div class="containerText">
-                        <p>Lasers: <span id="lasersNum">0</span></p>
-                        
-                        <p>Laser cost: <span id="laserCost">1,000</span></p>
-                        
-                        <p>+12 Stars per second</p>
-                    </div>
-                </div>
-                <div class="bomb">
-                    <div class="containerImage">
-                        <img src="images/items/bomb.png" class="itemImage" style="width:100px;height:100px;">
-                        
-                        <div class="buyButtonContainer">
-                            
-                            <button onclick="buyBombs()" class="buyButton">Buy Bombs</button>
-                        </div>
-                    </div>
-                    
-                    <div class="containerText">
-                        <p>Bombs: <span id="bombsNum">0</span></p>
-                        
-                        <p>Bomb cost: <span id="bombCost">5,000</span></p>
-                        
-                        <p>+20 Stars per second</p>
-                    </div>
-                </div>
-                <div class="nuke">
-                    <div class="containerImage">
-                        <img src="images/items/nuke.png" class="itemImage" style="width:100px;height:100px;">
-                        
-                        <div class="buyButtonContainer">
-                            
-                            <button onclick="buyNukes()" class="buyButton">Buy Nukes</button>
-                        </div>
-                    </div>
-                    
-                    <div class="containerText">
-                        <p>Nukes: <span id="nukeNum">0</span></p>
-                        
-                        <p>Nuke cost: <span id="nukeCost">25,000</span></p>
-                        
-                        <p>+30 Stars per second</p>
-                </div>
+            <div id="upgrade-display-div" class="grid-item"></div>
+            <div id="store-container" class="grid-item">
+                <div id="store"><h1>Upgrades</h1></div>
             </div>
-        </center>
+        </div>
+        <div id="reset-save-btns" class="btn-container">
+            <div id="reset-btn" class="btn">
+                <h1 onclick="resetGame()">RESET</h1>
+            </div>
+            <div id="save-btn" class="btn" onclick="saveGame(true)">
+                <h1>SAVE</h1>
+            </div>
+        </div>
+        <div id="tooltip-box">
+            <p id="tooltip">Game saves automatically every 60 seconds...</p>
+        </div>
     </body>
 </html>
